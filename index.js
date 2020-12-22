@@ -21,7 +21,7 @@ return getCart().length === 0 ? "Your shopping cart is empty." : cartDescription
 
 function total() {
   var sum = 0
-  for (i=0; i<getCart().length; i++){
+  for (var i=0; i<getCart().length; i++){
     sum = sum + getCart()[i].itemPrice
   }
 }
