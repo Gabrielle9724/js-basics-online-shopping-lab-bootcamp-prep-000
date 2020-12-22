@@ -16,7 +16,18 @@ function addToCart(item) {
 }
 
 function viewCart() {
-return getCart().length === 0 ? "Your shopping cart is empty." : cartDescription
+return getCart().length === 0 ? "Your shopping cart is empty."
+var beginning =  "In your cart, you have"
+if (getCart().length >= 1){
+  beginning += `${getCart()[0].itemName} at $${getCart()[0].itemPrice}`
+}
+if (getCart().length >=2){
+  var moreItems = ''
+  for (let i=1; i<getCart().length-1; i++){
+    moreItems += `${getCart()[i].itemName} at $${getCart()[i].itemPrice}`
+  }
+  beginning += `${moreItems}, and ${getCart()[getCart().length-1].itemName} at $${getCart()[getCart().length-1].itemPrice}`
+}
 }
 
 function total() {
@@ -41,7 +52,7 @@ function randomItem(itemName){
   }
 }
 
-function cartDescription(){
+/*function cartDescription(){
   var beginning =  "In your cart, you have"
   if (getCart().length >= 1){
     beginning += `${getCart()[0].itemName} at $${getCart()[0].itemPrice}`
@@ -53,4 +64,4 @@ function cartDescription(){
     }
     beginning += `${moreItems}, and ${getCart()[getCart().length-1].itemName} at $${getCart()[getCart().length-1].itemPrice}`
   }
-}
+}*/
