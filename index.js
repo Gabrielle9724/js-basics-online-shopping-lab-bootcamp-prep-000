@@ -44,12 +44,12 @@ function randomItem(itemName){
 function cartDescription(){
   var beginning =  "In your cart, you have"
   if (getCart().length >= 1){
-    beginning + `${getCart()[0].itemName} at $${getCart()[0].itemPrice}`
+    beginning += `${getCart()[0].itemName} at $${getCart()[0].itemPrice}`
   }
   if (getCart().length >=2){
     var moreItems = ''
     for (let i=1; i<getCart().length-1; i++){
-      moreItems + `${getCart()[i].itemName} at $${getCart()[i].itemPrice}`
+      moreItems += `${getCart()[i].itemName} at $${getCart()[i].itemPrice}`
     }
   }
 }
