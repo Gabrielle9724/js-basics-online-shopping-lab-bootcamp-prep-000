@@ -48,8 +48,8 @@ function cartDescription(){
   }
   if (getCart().length >=2){
     var moreItems = ''
-    for (let i=1; i<getCart().length-1; i++){
-      moreItems += `${getCart()[i].itemName} at $${getCart()[i].itemPrice}`
+    for (var i=1; i<getCart().length-1; i++){
+      moreItems += `, ${getCart()[i].itemName} at $${getCart()[i].itemPrice}`
     }
     beginning += `${moreItems}, and ${getCart()[getCart().length-1].itemName} at $${getCart()[getCart().length-1].itemPrice}`
   }
