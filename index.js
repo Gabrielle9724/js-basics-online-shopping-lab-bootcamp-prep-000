@@ -30,8 +30,8 @@ function total() {
 function removeFromCart(item) {
   var searchResult
   for (var i=0; i<getCart().length; i++){
-    if (getCart().itemName === item){
-      searchResult= getCart().itemName
+    if (getCart()[i].itemName === item){
+      searchResult= getCart()[i]
     }
   }
   return searchResult
