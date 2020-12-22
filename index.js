@@ -42,7 +42,7 @@ function randomItem(itemName){
 }
 
 function cartDescription(){
-  var beginning =  "In your cart, you have"
+  var beginning =  "In your cart, you have "
   if (getCart().length >= 1){
     beginning += `${getCart()[0].itemName} at $${getCart()[0].itemPrice}`
   }
