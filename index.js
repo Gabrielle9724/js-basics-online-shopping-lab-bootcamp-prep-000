@@ -33,8 +33,6 @@ function removeFromCart(item) {
     if (getCart().itemName === item){
       searchResult= getCart().itemName
     }
-  } else {
-  return "That item is not in your cart."
   }
   return searchResult
 }
