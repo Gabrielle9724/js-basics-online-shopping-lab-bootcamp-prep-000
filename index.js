@@ -53,4 +53,5 @@ function cartDescription(){
     }
     beginning += `${moreItems}, and ${getCart()[getCart().length-1].itemName} at $${getCart()[getCart().length-1].itemPrice}`
   }
+  return `${beginning}`
 }
