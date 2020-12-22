@@ -10,13 +10,17 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- var item = shoppingList(item)
+ var item = randomItem(item)
  getCart().push(item)
- return `${itemName} has been added to your cart.`
+ return `${item.itemName} has been added to your cart.`
 }
 
 function viewCart() {
-  // write your code here
+  if getCart().length === 0 {
+    return "Your shopping cart is empty."
+  } else {
+    return `In your cart, you have ${item.itemName} at ${itemPrice}`
+  }
 }
 
 function total() {
@@ -29,4 +33,14 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
+}
+
+function getRandomInt(min, max){
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function randomItem(itemName){
+  return {
+    itemName: itemName, itemPrice: getRandomInt(1,100)
+  }
 }
