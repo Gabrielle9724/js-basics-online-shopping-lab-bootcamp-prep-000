@@ -27,10 +27,10 @@ function total() {
   return sum
 }
 
-function removeFromCart(item) {
+function removeFromCart(itemName) {
   var searchResult
   for (var i=0; i<getCart().length; i++){
-    if (getCart()[i].itemName === item){
+    if (getCart()[i].itemName === itemName){
       searchResult= getCart()[i]
     }
   }
